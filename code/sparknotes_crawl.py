@@ -19,10 +19,10 @@ def init_mongo_client():
     db = client.books
 
     # Access collection created for these articles
-    coll = db.book_summary
+    coll = db.book_summary2
 
     # Access articles collection in db and return collection pointer.
-    return db.book_summary
+    return db.book_summary2
 
 
 def search_main(coll):
@@ -89,8 +89,15 @@ def search_character(url='http://www.sparknotes.com/lit/2001/characters.html'):
     descriptions = paragraphs
     # descriptions = [re.sub('\n','',p.text_content()) for p in paragraphs]
     # descriptions = tree.xpath('//div[@id = "characterlist"]//div[@id = "content_txt"]/text()')
-    return dict(zip(names,descriptions))
+    return list(zip(names,descriptions))
 
+def write_all_summary(books,indexes,file):
+    with open(file,'w') as f:
+        for i in indexes:
+            f.write('{}. {}'.format(i+1, books[i]['name']))
+            f.write('\n \n')
+            f.write(re.sub('\n','\n \n',books[i]['summary']))
+            f.write('\n \n \n \n')
 
 if __name__ == '__main__':
     book_summary = init_mongo_client()
