@@ -1,5 +1,6 @@
 import json
 import sys
+import re
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -41,8 +42,9 @@ def write_book_level(books):
 
 def write_all_summary(books):
     for i in xrange(len(books)):
-        with open('../data/summary-text/{}.{}.txt'.format(i+1,books[i]['name']),'w') as f:
-            f.write(books[i]['summary'])
+        with open('../data/summary-text/{}.{}.txt'.format(i+1,re.sub('\s','_',books[i]['name'])),'w') as f:
+            f.write(books[i]['summary'].decode("utf-8").replace(u"\u2019", "'"))
+
 
 if __name__ == '__main__':
     # lst = ['A','B','C','D','E']
