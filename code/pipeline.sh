@@ -1,4 +1,4 @@
-mongoexport --db books --collection book_summary2 --out book_summary2.json --host 127.0.0.1 --port 27017 --jsonArray
+mongoexport --db books --collection book_summary3 --out book_summary3.json --host 127.0.0.1 --port 27017 --jsonArray
 
 java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 

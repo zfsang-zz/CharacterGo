@@ -8,8 +8,17 @@ import numpy as np
 import pymongo
 import tqdm
 import sys
+import unicodedata
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
+
+""" Normalise (normalize) unicode data in Python to remove umlauts, accents etc. """
+def unicode_normalizer(text):
+    text =text.replace(u"\u2019", "'")
+    normal = unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore')
+    return normal
 
 def init_mongo_client():
     # Initiate Mongo client
@@ -19,10 +28,10 @@ def init_mongo_client():
     db = client.books
 
     # Access collection created for these articles
-    coll = db.book_summary2
+    coll = db.book_summary3
 
     # Access articles collection in db and return collection pointer.
-    return db.book_summary2
+    return db.book_summary3
 
 
 def search_main(coll):
@@ -79,7 +88,7 @@ def search_content(url='http://www.sparknotes.com/lit/1984/summary.html'):
     tree = html.fromstring(page.content)
     paragraphs = tree.xpath('//div[@id = "plotoverview"][@class ="studyGuideText"]//p')
     paragraphs = '\n'.join([re.sub('\n','',p.text_content()) for p in paragraphs])
-    return paragraphs
+    return unicode_normalizer(paragraphs)
 
 def search_character(url='http://www.sparknotes.com/lit/2001/characters.html'):
     page = requests.get(url)

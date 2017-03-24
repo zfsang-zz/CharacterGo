@@ -2,6 +2,14 @@ import json
 from bs4 import BeautifulSoup
 import spacy
 import re
+import unicodedata
+
+def unicode_normalizer(text):
+    text =text.replace(u"\u2019", "'")
+    normal = unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore')
+    return normal
+
+
 def read_books_json(json_file):
     '''
     INPUT:json array file
@@ -29,6 +37,7 @@ def read_book_nlp_html(file='/Users/codehi/Projects/Galvanize/Capstone/tools/boo
         text = '\n'.join(chunk for chunk in chunks if chunk)
         clean_text = re.sub('\S+ \((\S+)\)', '\\1', text)
         return clean_text
+
 
 
 

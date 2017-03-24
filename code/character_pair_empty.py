@@ -43,13 +43,13 @@ def write_book_level(books):
 def write_all_summary(books):
     for i in xrange(len(books)):
         with open('../data/summary-text/{}.{}.txt'.format(i+1,re.sub('\s','_',books[i]['name'])),'w') as f:
-            f.write(books[i]['summary'].decode("utf-8").replace(u"\u2019", "'"))
+            f.write(books[i]['summary'])
 
 
 if __name__ == '__main__':
     # lst = ['A','B','C','D','E']
     # write_pair_one_book('testbook',lst)
-    books = read_data('../data/SparkNotes_book_summary.json')
+    books = read_data('../data/book_summary3.json')
     # write_pair_all_book(books)
     # write_url(books)
     write_all_summary(books)
