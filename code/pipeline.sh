@@ -11,4 +11,6 @@ java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokeni
 java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner,parse,sentiment -file ../../data/summary-tag/1.1984_tag_clean.txt -outputDirectory ../../data/summary-tag/
 
 
-java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators -annotators tokenize,ssplit,pos,lemma,parse,sentiment -file ../../data/summary-tag/1.1984_tag_clean.txt -outputDirectory ../../data/summary-tag/
+java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner,parse,sentiment -file ../../data/summary-tag/1.1984_tag_clean.txt -outputDirectory ../../data/summary-tag/
+
+java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner,parse,sentiment -file ../../data/full-text/1.F.1984.txt -outputDirectory ../../data/full-tag/
