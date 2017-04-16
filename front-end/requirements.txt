@@ -1,0 +1,4 @@
+flask
+cherrypy
+flickrapi
+requests

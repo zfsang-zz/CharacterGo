@@ -1,0 +1,359 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#foodnav{
+    
+    height:20px;
+    background-color:transparent;
+    border:none;
+    background: rgba(0, 0, 0, 0.5);
+}
+#websitename{
+    
+    color:white;
+    border-color:#fff;
+    font-size:1.5em;
+   
+}
+
+#linkedin{
+    color:white;
+}
+#github{
+    color:white;
+}
+#login{
+    
+    color:white;
+}
+
+#fa fa-linkedin fa-fw{
+    
+    color:white;
+}
+#linkedin{
+    
+    
+    overflow:visible;
+    position:relative;
+}
+
+#linkedinspan{
+    
+    margin-right:10%;
+    float:right;
+    
+   width:200px;
+    padding:10px;
+    background: rgba(0, 0, 0, 0.5);
+    
+    
+    
+}
+
+#linkedinspan > a{
+    
+    color:white;
+    font-size: 15px;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/land.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment:fixed;
+    height:600px;
+    
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 30%;
+}
+
+.intro-message > h1 {
+    margin-left:25%;
+    margin-right:25%;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+     background: rgba(0, 0, 0, 0.5);
+    padding:10px;
+    
+    text-align:center;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+        
+    }
+    .intro-message>h3{
+        font-size: 1.5em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+       
+    }
+
+    #right{
+        display: inline-block;
+        
+    }
+
+    .intro-divider {
+        width: 60%;
+    }
+    #go-adventure{
+        display:inline-block;
+        
+    }
+}
+.intro-social-buttons>li{
+    
+   
+    height:50px;
+    
+}
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    
+}
+
+
+
+
+ 
+#go-safe{
+    
+    display: inline-block;
+    width:100%;
+    background-color:pink;
+}
+
+#go-safe{
+    
+    width:180px;
+    background-color:rgba(255, 255, 255, 0.75);
+   
+}
+
+#go-adventure{
+    
+    width:180px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    
+}
+
+
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/social-world.jpg) no-repeat center center;
+    background-size: cover;
+    height:250px;
+}
+
+
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+#bannermessage{
+    
+    padding-top: 0px;
+    
+    
+}
+
+#go-adventure{
+    
+    background-color:rgba(255, 255, 255, 0.75);
+}
+#adventure{
+    display:block;
+    background-color:rgba(255, 255, 255, 0.75);
+    color:#333;
+    width:100%;
+    border-color:#ccc;
+    padding:10px 16px;
+    font-size:18px;
+    line-height:1.333333;
+    border-radius:6px;
+   box-sizing:border-box;
+    
+    
+    
+}
+
+#back{
+    background-color:rgba(255, 255, 255, 0.75);
+    
+}
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    
+    margin: 0 0 0;
+   
+    
+}
+
+
+#bottonname{
+    display: inline-block;
+    clear:none;
+    margin-left:0px;
+   
+    
+    width:60%;
+}
+
+#bottonname h2{
+    
+    font-size:35px;
+}
+
+#bottonlinks{
+    display: inline-block;
+    float: right;
+    
+    clear:none;
+}
+
+#techword{
+    
+    font-size:20px;
+    color: gray;
+}
+#yelp{
+    
+    width:45px;
+    height:45px;
+}
+
+#bootstraplink{
+    margin-left: 5px;
+}
+
+input.error { border: thin solid red; }
+  label.error {
+      background: url('red_x.gif') no-repeat;
+      padding-left: 20px;
+      margin-left: 0.5em;
+      color: red;
+  }
+

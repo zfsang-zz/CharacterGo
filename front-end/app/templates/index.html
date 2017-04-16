@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Character GO</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js" integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"> </script>
+<!--     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ -->    
+ <!-- <script   src="https://code.jquery.com/jquery-1.9.1.min.js"   integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="   crossorigin="anonymous"></script> -->
+      <script   src="https://code.jquery.com/ui/1.10.0/jquery-ui.min.js"   integrity="sha256-hTpbeVXhgCmfO7nGcWp9d1kImKbzY6gN0Vo5u5wLuss="   crossorigin="anonymous"></script>  
+    
+    
+   <!-- <script src="https://code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var validation = $("#adventure").validate(
+    {
+    rules: { 
+      location:  { required: true, minlength: 5, maxlength:5 },
+     
+    }
+  });
+});
+</script> -->
+    
+
+    
+    
+       <script type="text/javascript">
+         $(document).ready(function(){
+             $("#adventure").hide();
+             $("#back").hide();
+             
+             
+             $("#go-adventure").click(function(){
+                 
+                 $("#adventure").fadeIn('slow');
+                 $("#back").fadeIn('slow');
+                 
+                 $("#near-by").hide();
+                 $(".title").hide();
+                 $("#the_words").hide();
+                 $(".intro-divider").hide();
+                 $("#title").hide();
+                 $("#go-adventure").hide();
+                 
+             });
+             
+             
+             
+         });
+           $(document).mouseup(function (e){
+                var container = $("#adventure");
+
+                if (!container.is(e.target) 
+                   && container.has(e.target).length === 0) {
+                           container.hide();
+                           $("#near-by").show();
+                           $("#back").hide();
+                           $(".title").fadeIn('slow');
+                           $("#the_words").show();
+                           $(".intro-divider").show();
+                           $("#title").show();
+                           $("#go-adventure").show();
+                      }
+            });
+           
+           
+             
+           
+           $(function () {
+    $(document).tooltip({
+        content: function () {
+            return $("#linkedin").prop('title');
+        },
+        show: null, 
+        close: function (event, ui) {
+            ui.tooltip.hover(
+
+            function () {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+
+            function () {
+                $(this).fadeOut("400", function () {
+                    $(this).remove();
+                })
+            });
+        }
+    });
+});
+        $(function () {
+    $(document).tooltip({
+        content: function () {
+            return $("#bottonlinkedin").prop('title');
+        },
+        show: null, 
+        close: function (event, ui) {
+            ui.tooltip.hover(
+
+            function () {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+
+            function () {
+                $(this).fadeOut("400", function () {
+                    $(this).remove();
+                })
+            });
+        }
+    });
+});   
+// navigator.geolocation.getCurrentPosition(function(position) {
+
+//     strLink = 'http://127.0.0.1:5000/result?&cata=sunset&lat=' + position.coords.latitude + '&lon=' + position.coords.longitude;
+//     document.getElementById("near-by").setAttribute("href",strLink);
+
+// });
+function geoFindMe() {
+  var output = document.getElementById("out");
+
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
+
+  function success(position) {
+    var strLink = '/result?&cata=sunset&lat=' + position.coords.latitude + '&lon=' + position.coords.longitude;
+    // document.getElementById("near-by").setAttribute("href",strLink);
+    window.location.href = strLink;
+
+  };
+
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+            
+      </script>
+      
+</head>
+    
+    
+<body>
+
+    <!-- Navigation -->
+    <nav id="foodnav"  class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="websitename"class="navbar-brand topnav" href="#">Character GO</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    
+                    <li>
+                       <a href="/" id="login">Home</a>
+                    </li>
+     
+                    <li>
+                        <a href="login.html" id="login">Login</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1 id="title"><span class="title">Discover it</span></h1>
+                        <h3 id="the_words">What's the relationship among characters in the story?</h3>
+                        <hr class="intro-divider">
+                        <ul id="thefun" class="list-inline intro-social-buttons">
+                            <li id="left">
+                                
+                                 
+                                 <button type="button" id="go-adventure" class="btn btn-default btn-lg"><span class="network-name"> Find Out</span> </button>
+                                
+                                 <form method="get" name="adventure" id="adventure" action="/result" enctype="application/x-www-form-urlencoded">
+                                     <fieldset id="adventureform">
+                                         <legend>Your Exploration</legend>
+                                         <p>
+                                             <label for="zip">Input Text</label> 
+                                               :<br/>
+                                             <input id="zip" type="text" name="location"  class="required" size="20"/>
+                                             <br/>
+                                             <!-- <label for="type">Scenery Type</label> -->
+                                             <br/>
+        <!--                                      <select name="cata">
+                                                <optgroup label="By Scenery">
+                                                    <option value="sunset" selected >Sunset</option>
+                                                    <option value="sunraise">Sunraise</option>
+                                                    <option value="skyline">Skyline</option>
+                                                    <option value="star">Star</option>
+
+                                                </optgroup>
+                                                <optgroup label="By Type">
+                                                    <option value="Architecture">Architecture</option>
+                                                    <option value="Wildlife">Wildlife</option>
+                                                    <option value="Historical">Historical</option>
+                                                    <option value="Landscape">Landscape</option>
+                                                </optgroup>
+                                             </select> -->
+                                          </p>
+                                     </fieldset>
+                                      <input type="submit" value="GO!"><br>
+                                      
+                                </form>
+                               
+                                
+                            </li>
+                            <li id="right" >
+                                <a  id="near-by" class="btn btn-default btn-lg" onclick=geoFindMe()> <span class="network-name">Explore</span></a>
+                                <div id="out"></div>
+
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">The architecture of CharacterGO system</h2>
+                    <p class="lead"> Designed for good character relationship extraction, prediction and visualization.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="../static/img/CharacterGO.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">A readable character relationship on the cloud.</h2>
+                    <p class="lead"> Check it out!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="../static/img/sample-relation.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+   
+    <!-- /.content-section-a -->
+
+	<a  name="contact"></a>
+    <div class="banner" >
+
+        <div class="container" >
+
+            <div  id="bannermessage" class="row">
+                <div id="bottonname" class="col-lg-6">
+                    <h2>Your Everyday Adventure</h2>
+                </div>
+                <div id="bottonlinks" class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+           <!--               <li>
+                            <a href="https://www.facebook.com/foodchasing/?skip_nax_wizard=true" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                        -->
+                        <li>
+                            <a href="https://github.com/zfsang/CharacterGO" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                <li>
+                            <a href="https://www.linkedin.com/in/zhifansang" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row" >
+                <div class="col-lg-12">
+                    <h6 id="techword">Powered by:</h6>
+                    <ul class="list-inline">
+                        <li>
+                            <img id="python_icon" src="../static/img/Python.svg"><a href="https://www.python.org/">Python 2.7</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <img src="../static/img/docker.png"><a href="https://www.docker.com/">Docker</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <img id="yelp" src="../static/img/yahoo-flickr-logo.jpg"><a href="https://www.flickr.com/services/">  Flickr API</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                     <!--     <li>
+                            <img src="../static/img/googlemaps-icon.png"><a  href="https://developers.google.com/maps/">  Google Map</a>
+                        </li> -->
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <img src="../static/img/bootstrap.png"><a id="bootstraplink" href="http://getbootstrap.com/">  Bootstrap</a>
+                        </li>
+                         <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                            <img src="../static/img/flask.png"><a  href="http://flask.pocoo.org/">  Flask</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                            <img src="../static/img/jquery.png"><a  href="https://jquery.com/">  Jquery</a>
+                        </li>
+                    
+                    </ul>
+                    <ul class="list-inline">
+                        <li>
+                    <p class="copyright text"> CharacterGO</p>
+                            </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <p id="author" class="copyright text-muted small">Created By Zhifan</p>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><p class="copyright text-muted small">
+                            Aug. 2016</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

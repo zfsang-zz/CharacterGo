@@ -1,0 +1,342 @@
+/*!
+ * Start Bootstrap - Freelancer v1.1.1 (http://startbootstrap.com/template-overviews/freelancer)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+header .intro-text .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+header .intro-text .skills {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
+
+
+
+/*the added stuffs*/
+
+/*nav bar*/
+#navinfo{
+    width:80%;
+    margin-right:10%;
+    margin-left:10%;
+    
+}
+#bs-example-navbar-collapse-1{
+    margin-right: 5px;
+}
+
+#foodnav{
+    
+    height:20px;
+    background-color:transparent;
+    border:none;
+    background: rgba(0, 0, 0, 0.5);
+    
+    
+}
+#websitename{
+    
+    color:white;
+    border-color:#fff;
+    font-size:21px;
+    font-weight:bold;
+   
+   
+}
+
+#linkedin{
+    color:white;
+    font-weight:bold;
+}
+#github{
+    color:white;
+    font-weight:bold;
+}
+#login{
+    
+    color:white;
+    font-weight:bold;
+}
+#fa fa-linkedin fa-fw{
+    
+    color:white;
+}
+#linkedin{
+    
+    
+    overflow:visible;
+    position:relative;
+}
+
+#linkedinspan{
+    
+    margin-right:10%;
+    float:right;
+    
+   width:200px;
+    padding:10px;
+    background: rgba(0, 0, 0, 0.5);
+    
+    
+    
+}
+
+#linkedinspan > a{
+    
+    color:white;
+    font-size: 15px;
+}
+
+/*end of navbar*/
+/*-------------------------head--------------------------- */
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 0px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/background.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment:fixed;
+    height: 450px;
+    box-sizing: border-box;
+    position:relative;
+    
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+
+h1 {
+    margin-left:25%;
+    margin-right:25%;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 4em;
+     background: rgba(0, 0, 0, 0.5);
+    padding:10px;
+    margin-top:6%;
+    
+    text-align:center;
+}
+
+
+
+#back_icon{
+    
+   position:relative;
+    width:80px;
+    height: 80px;
+    opacity:0.7;
+    fill: white;
+    clear: none;
+    margin-right: 30%;
+    margin-bottom:20%;
+   
+    
+
+   
+    
+   
+    
+}
+
+
+
+
+#next_icon{
+    position:relative;
+    width:80px;
+    height: 80px;
+    opacity:0.7;
+    fill: white;
+    clear: none;
+    
+    margin-left: 30%;
+    margin-bottom:20%;
+    
+    
+}
+#info{
+    display:block;
+    
+    background-color: rgba(0,0,0,0.6);
+    bottom: 0%;
+    left: 0;
+    padding-bottom:5px;
+    padding-top: 10px;
+    position: absolute;
+    bottom:0px;
+    right: 0;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top:3px;
+    width:100%;
+    margin-left:0px;
+    height:15%;
+    font-size:1.5em;
+    
+
+    
+   
+}
+#info .list-inline li a{
+    color:white;
+}
+
+@media (max-width: 743px){
+#back_icon {
+    width:60px;
+    height: 60px;
+}
+    #next_icon{
+        width:60px;
+        height:60px;
+    }
+    .intro-header >h1{
+        font-size: 3em;
+    }
+    .intro-header > h3{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1500px){
+    
+    
+    #address{
+        display:inline-block;
+        clear:none;
+        float:left;
+        font-size:0.8em;
+        margin-left:40%;
+    }
+    .list-inline{
+        clear:none;
+        float:left;
+        margin-left:2%;
+        font-size:0.8em;
+    }
+    #info{
+        height:10%;
+    }
+    #back_link{
+        margin-bottom: 40%;
+        
+    }
+    #next_link{
+        margin-bottom:40%;
+    }
+}
+
+
+
+
+
+/*---footer info--*/
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/landscape.jpg) no-repeat center center;
+    background-size: cover;
+    height:250px;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+#bannermessage{
+    
+    padding-top: 0px;
+    
+    
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    
+    margin: 0 0 0;
+   
+    
+}
+
+
+#bottonname{
+    display: inline-block;
+    clear:none;
+    margin-left:0px;
+   
+    
+    width:60%;
+}
+
+#bottonname h2{
+    
+    font-size:35px;
+}
+
+#bottonlinks{
+    display: inline-block;
+    float: right;
+    
+    clear:none;
+}
+
+#techword{
+    
+    font-size:20px;
+    color: gray;
+}
+#yelp{
+    
+    width:45px;
+    height:45px;
+}
+
+#bootstraplink{
+    margin-left: 5px;
+}
+
+
