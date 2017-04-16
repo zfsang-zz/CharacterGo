@@ -6,5 +6,5 @@
 /Reference
 /book
 /relationship2
-*csv
-*pyc
+*.csv
+*.pyc
