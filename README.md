@@ -9,6 +9,16 @@ Identifying relationships between people is fundamental for the understanding of
 CharacterGo is a character interpretation system that be able to guide the interpretation of narrative events, explain character behaviors and steer the reader’s expectation about the plot using self-generated character relationship graphs. As such, it can have value for applications such as document summarization and machine reading.
 
 
+### Framework
+- Python 2.7
+- Stanford CoreNLP
+- book-nlp
+- Spacy
+- scikit-learn
+- Bash Shell
+- Flask
+- vis.js
+
 
 ### Name Clustering
 - Name Entity Recognition
