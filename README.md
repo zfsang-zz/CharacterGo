@@ -1,8 +1,8 @@
 # CharacterGo
 
-
+### Highlights
+![img](img/methods.png)
 ### Background
-
 
 Identifying relationships between people is fundamental for the understanding of literatures. Main characters may have very certain strong relationship such as love, family, enemy, friend with others.
 
@@ -26,7 +26,6 @@ CharacterGo is a character interpretation system that be able to guide the inter
 3. Build supervised models including random forest, boosting, SVM and unsupervised representation using sklearn, plotly in Python
 4. Wrap all the functionalities in Flask framework, and set up local host server to handle raw input and output predictions and visualizations.
 
-![img](img/methods.png)
 ![img](img/system.png)
 
 
